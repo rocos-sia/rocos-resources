@@ -1,0 +1,52 @@
+name: Update resource manifest
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+concurrency:
+  group: resource-manifest-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Test manifest generator
+        run: python3 -m unittest discover -s tests -v
+      - name: Generate and commit manifest
+        env:
+          MANIFEST_BRANCH: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Regenerate from the latest branch on each attempt if another push races us.
+          for attempt in 1 2 3; do
+            git fetch origin "refs/heads/$MANIFEST_BRANCH"
+            git reset --hard FETCH_HEAD
+            python3 scripts/generate_manifest.py
+            git add -- manifest.json
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m 'chore: update resource manifest'
+            if git push origin "HEAD:refs/heads/$MANIFEST_BRANCH"; then
+              exit 0
+            fi
+          done
+          echo 'Unable to push manifest; check branch rules and Actions write permissions.' >&2
+          exit 1

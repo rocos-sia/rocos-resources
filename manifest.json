@@ -1,0 +1,768 @@
+{
+  "schema_version": 1,
+  "specification": "https://rocos-sia.feishu.cn/wiki/Wj2IwOm8BiYslfkxImicRpArn6g",
+  "summary": {
+    "resource_count": 11,
+    "file_count": 79,
+    "total_size_bytes": 21941055,
+    "resource_types": {
+      "config_template": 4,
+      "device": 2,
+      "robot": 2,
+      "script_collection": 1,
+      "tool": 2
+    },
+    "file_types": {
+      "configuration": 4,
+      "device_config": 2,
+      "documentation": 21,
+      "ethercat_eni": 1,
+      "frame_records": 1,
+      "hardware_config": 2,
+      "license": 1,
+      "master_config": 3,
+      "mesh": 27,
+      "mjcf": 5,
+      "robot_config": 2,
+      "simulation_config": 2,
+      "source_notice": 2,
+      "tool_config": 2,
+      "urdf": 4
+    }
+  },
+  "resources": [
+    {
+      "id": "config/app.yaml",
+      "type": "config_template",
+      "name": "app",
+      "path": "config/app.yaml",
+      "entrypoint": "config/app.yaml",
+      "readme": null,
+      "file_count": 1
+    },
+    {
+      "id": "config/app_rcm.yaml",
+      "type": "config_template",
+      "name": "app_rcm",
+      "path": "config/app_rcm.yaml",
+      "entrypoint": "config/app_rcm.yaml",
+      "readme": null,
+      "file_count": 1
+    },
+    {
+      "id": "config/devices/rcm_sim",
+      "type": "device",
+      "name": "rcm_sim",
+      "path": "config/devices/rcm_sim",
+      "entrypoint": "config/devices/rcm_sim/device.yaml",
+      "readme": "config/devices/rcm_sim/README.md",
+      "file_count": 4
+    },
+    {
+      "id": "config/devices/talon_001",
+      "type": "device",
+      "name": "talon_001",
+      "path": "config/devices/talon_001",
+      "entrypoint": "config/devices/talon_001/device.yaml",
+      "readme": "config/devices/talon_001/README.md",
+      "file_count": 5
+    },
+    {
+      "id": "config/identified_impedance.yaml",
+      "type": "config_template",
+      "name": "identified_impedance",
+      "path": "config/identified_impedance.yaml",
+      "entrypoint": "config/identified_impedance.yaml",
+      "readme": null,
+      "file_count": 1
+    },
+    {
+      "id": "config/robots/rcm",
+      "type": "robot",
+      "name": "rcm",
+      "path": "config/robots/rcm",
+      "entrypoint": "config/robots/rcm/robot.yaml",
+      "readme": "config/robots/rcm/README.md",
+      "file_count": 19
+    },
+    {
+      "id": "config/robots/talon",
+      "type": "robot",
+      "name": "talon",
+      "path": "config/robots/talon",
+      "entrypoint": "config/robots/talon/robot.yaml",
+      "readme": "config/robots/talon/README.md",
+      "file_count": 19
+    },
+    {
+      "id": "config/scripts",
+      "type": "script_collection",
+      "name": "scripts",
+      "path": "config/scripts",
+      "entrypoint": null,
+      "readme": "config/scripts/README.md",
+      "file_count": 1
+    },
+    {
+      "id": "config/tools/demo_gripper",
+      "type": "tool",
+      "name": "demo_gripper",
+      "path": "config/tools/demo_gripper",
+      "entrypoint": "config/tools/demo_gripper/tool.yaml",
+      "readme": "config/tools/demo_gripper/README.md",
+      "file_count": 4
+    },
+    {
+      "id": "config/tools/robotiq_2f85",
+      "type": "tool",
+      "name": "robotiq_2f85",
+      "path": "config/tools/robotiq_2f85",
+      "entrypoint": "config/tools/robotiq_2f85/tool.yaml",
+      "readme": "config/tools/robotiq_2f85/README.md",
+      "file_count": 14
+    },
+    {
+      "id": "config/user.yaml",
+      "type": "config_template",
+      "name": "user",
+      "path": "config/user.yaml",
+      "entrypoint": "config/user.yaml",
+      "readme": null,
+      "file_count": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 2338,
+      "sha256": "2180a8cf10d1e3dc1372faf317a47dc7ab31d9201b2e59c6302c2892edbcbf09",
+      "resource": null
+    },
+    {
+      "path": "README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 4559,
+      "sha256": "689ec1eb7948a1b1a06028e0567d91e8cb6fd04a14de3f2dbbf2871601f87457",
+      "resource": null
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "type": "source_notice",
+      "format": "md",
+      "size_bytes": 1469,
+      "sha256": "67a56276858eb0e48b404263412afb694c5c67e2d43e705af824f94d1d00d5d2",
+      "resource": null
+    },
+    {
+      "path": "config/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 3403,
+      "sha256": "d93434e882dc41883c8867a97e3f8d710eb36eee1adc267b4fbd0da675377f03",
+      "resource": null
+    },
+    {
+      "path": "config/app.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 623,
+      "sha256": "406cb0b635d772ac5eb9f522f297c6f7cd85f419a74f4b36b9f9b05107e1c256",
+      "resource": "config/app.yaml"
+    },
+    {
+      "path": "config/app_rcm.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 652,
+      "sha256": "67297e27c13b208ebd8e13e79bfdb4453b6626865c738a93598cf37430133b26",
+      "resource": "config/app_rcm.yaml"
+    },
+    {
+      "path": "config/devices/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1237,
+      "sha256": "e5083fa036be7241fc9285367180c546ee8130ee6e8c33d38354fe0c6f592cfc",
+      "resource": null
+    },
+    {
+      "path": "config/devices/rcm_sim/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1075,
+      "sha256": "c95f08323a7cd152f356b8df78f66269b1de6210e53d41f778173871197e8a25",
+      "resource": "config/devices/rcm_sim"
+    },
+    {
+      "path": "config/devices/rcm_sim/device.yaml",
+      "type": "device_config",
+      "format": "yaml",
+      "size_bytes": 290,
+      "sha256": "7eaf676166e0e4789f77d33c2560ceebf43e809344402405e947d43338ef8c9b",
+      "resource": "config/devices/rcm_sim"
+    },
+    {
+      "path": "config/devices/rcm_sim/identification/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1254,
+      "sha256": "3894f8190f2606553989c8fe2c4748dc8b55f4bfa118f6397b03869d776b692d",
+      "resource": "config/devices/rcm_sim"
+    },
+    {
+      "path": "config/devices/rcm_sim/maintenance/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 245,
+      "sha256": "1d644ed5918e9988cf8f0d99d551b08736023c9ed62fb3cfa5321063b2d3f5e4",
+      "resource": "config/devices/rcm_sim"
+    },
+    {
+      "path": "config/devices/talon_001/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1283,
+      "sha256": "2e1c8f55b04d2a2a93796424017575fbb9aaf94134eb0213342012e009f263ea",
+      "resource": "config/devices/talon_001"
+    },
+    {
+      "path": "config/devices/talon_001/device.yaml",
+      "type": "device_config",
+      "format": "yaml",
+      "size_bytes": 311,
+      "sha256": "bca2b6a10aa389485363b549d16980f653770fccc284e4ff91bafef05c0654ca",
+      "resource": "config/devices/talon_001"
+    },
+    {
+      "path": "config/devices/talon_001/frames.yaml",
+      "type": "frame_records",
+      "format": "yaml",
+      "size_bytes": 910,
+      "sha256": "f9c3f6b36f38821c21add3b71ee817a42d74416caccd94c3ed0b99dc870480e9",
+      "resource": "config/devices/talon_001"
+    },
+    {
+      "path": "config/devices/talon_001/identification/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1256,
+      "sha256": "0e686d11cb54a9693a7f7c868fbfe860f47b70c6c7e5537e056450f39757ba40",
+      "resource": "config/devices/talon_001"
+    },
+    {
+      "path": "config/devices/talon_001/maintenance/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 247,
+      "sha256": "06d1162d0dbd979f4cf9038fc031401f98395971dafe540e5e2448d9ea375711",
+      "resource": "config/devices/talon_001"
+    },
+    {
+      "path": "config/identified_impedance.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 1188,
+      "sha256": "6849f6ffd32f291a9dd8126de970c88eb2fc8ebd8724836de7eb11ab3f697152",
+      "resource": "config/identified_impedance.yaml"
+    },
+    {
+      "path": "config/robots/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 852,
+      "sha256": "ce6e5372166fe7d92bd97a55b1dc8952b68ab1cee6bbc5f6e9fbfe0e2c1a4c32",
+      "resource": null
+    },
+    {
+      "path": "config/robots/rcm/RCM.urdf",
+      "type": "urdf",
+      "format": "urdf",
+      "size_bytes": 12682,
+      "sha256": "238ed9e6571dff6e13c226bcc445678f2ca86cc15d5ee67d7de400fe16fc9299",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1941,
+      "sha256": "5291d5870d92bc7b9378187a74564e1a2d0c4c68ecf7aa836ba38765024d2403",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/hardware.yaml",
+      "type": "hardware_config",
+      "format": "yaml",
+      "size_bytes": 6453,
+      "sha256": "0df60b90022c7fcd8a993bfcfa576307b0468db1648fcc91c0645cea9f5b72bb",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/master.yaml",
+      "type": "master_config",
+      "format": "yaml",
+      "size_bytes": 178,
+      "sha256": "4b86839ef3fa694b667e7247c28c86df7d0374c13f33f9b09b4b336c657a92ff",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_1.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 720734,
+      "sha256": "322409bae3ba4faa4b5d341c082d28e3ba5416c077548018b1b35cf9baf22263",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_2.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 2186084,
+      "sha256": "093bd6b97479e5f989f89c60a0a45a17e71e8ad59a2871d28cb09e2df3a50aab",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_3.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 1966584,
+      "sha256": "6a1d41bf3ecdf6c88489131e0e03dbd0331006cc7e2c731bd96dbc58c16079fb",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_4.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 750234,
+      "sha256": "fa74c610b592036d78ae54c4d09b14b9a11d88ee3532acb71d5e8716ca7a483e",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_5.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 1129584,
+      "sha256": "1906c30549c55fc423e29086d53a6b96eec16e43f064d0c05b6adcda290d0da6",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_6.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 1234484,
+      "sha256": "3ad6d3c6f9725812bec3ff0a3a21d411bae8e85bfa46c44a28741a4b05863721",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_7.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 2958334,
+      "sha256": "83d60c5fe4d81cba5fdb18c02d00291c02a943c2f93a746b2688c9d7679ea233",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/Link_8.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 386984,
+      "sha256": "57d65bb9811d50bc9c18fd64a8ffbd74e9d093bc5dc9a942503d7c177401a5ef",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/meshes/base_link.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 4510984,
+      "sha256": "d544fdcdfe0e3e6d865f620f8fa2abd656ae811268fcec0754bcbda801110fa3",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/mjcf/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 2106,
+      "sha256": "1a9e9960b6b2c5b52b0057390955e5c4589d36ff1c3e16c6bff723056209696b",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/mjcf/collision_meshes.xml",
+      "type": "mjcf",
+      "format": "xml",
+      "size_bytes": 142145,
+      "sha256": "0c732181f7707f7c7d70a530d1aa6ad1d6e9a74e4843d1bd24ed5842a206e35f",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/mjcf/mujoco.yaml",
+      "type": "simulation_config",
+      "format": "yaml",
+      "size_bytes": 277,
+      "sha256": "e15b0b7db77864f97ea8938c4f22b8d85567f88af2fc427f9dfbd72db1e59a73",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/mjcf/rcm.xml",
+      "type": "mjcf",
+      "format": "xml",
+      "size_bytes": 13092,
+      "sha256": "876cd7c1ef1fb8471d427e7a3111fe7f519b3846a30dcb30f740aafb558ffbf3",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/mjcf/scene.xml",
+      "type": "mjcf",
+      "format": "xml",
+      "size_bytes": 908,
+      "sha256": "15cf704279d00d289250045ef274ab4a1089fdb8b5ea096875e47b7878650b09",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/rcm/robot.yaml",
+      "type": "robot_config",
+      "format": "yaml",
+      "size_bytes": 195,
+      "sha256": "3be019906d2b51d05befee9e2f68efb2feca0d780ed2213543b00d1fe21355c3",
+      "resource": "config/robots/rcm"
+    },
+    {
+      "path": "config/robots/talon/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 1992,
+      "sha256": "9f0f9a9d3c44f64454e6f0f36cec360f35d6d81dbaf2847ecabc2fc2fec9e3d8",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/ecm.yaml",
+      "type": "master_config",
+      "format": "yaml",
+      "size_bytes": 477,
+      "sha256": "a37eb5d98f5167456641159ccad27be8d755a3f2177d6ab0a5d9d6b297528891",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/eni7.xml",
+      "type": "ethercat_eni",
+      "format": "xml",
+      "size_bytes": 273395,
+      "sha256": "97389f7819b8bac814b07ec7d16ec3ecaf078844b8e49f31411b4cb844db40c7",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/hardware.yaml",
+      "type": "hardware_config",
+      "format": "yaml",
+      "size_bytes": 7693,
+      "sha256": "575e02fe74e160a37447c93d8384327f8110ff1dc56447db6cad5d485a215f0d",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/igh.yaml",
+      "type": "master_config",
+      "format": "yaml",
+      "size_bytes": 293,
+      "sha256": "844e9a3b2405822029c9f932dd3b62b051a132c64ff4bd2331ecad32592d6fd0",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/base_link.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 612084,
+      "sha256": "55f0c3b4a0a7f5ebbf585d08922a1ebcfc1927e22ff1c84ee437a8ab9b2b8627",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_1.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 541184,
+      "sha256": "52a1685cec9b109e7f080bf31675b50c2ef7efdf1af9fa5610dcd1ed38149e52",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_2.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 831784,
+      "sha256": "299af9be857c1b08696fd8845baf7888ae65754639d6e9577591f9a3d086e647",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_3.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 650084,
+      "sha256": "f7d31b432c6e0f44b038e5e97f5b332a68ac6ccfd77a8690332c92d695790e02",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_4.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 790084,
+      "sha256": "d26ea8bf75d3161899e6a951e2ade8521544ff394e0c597f94aa81ea95f8c060",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_5.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 617984,
+      "sha256": "e86834bb367697b5a11362b388acad8fa2cd141df9a21c8b3d802dae9583b605",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_6.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 776384,
+      "sha256": "84e743730ec6d2e3ab631d01104285e802845f533a27b047dd454d050f31a8de",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/meshes/link_7.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 247784,
+      "sha256": "7ca42585fb92cbdcf2191bd8c5e3a2a7528d7c4ca3d468b8ceec7da0b36a0d43",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/mjcf/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 967,
+      "sha256": "a4c55dd7c11046f1c68f592fdf12f5d1059e91292f6d73f09c048d52c8b71d38",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/mjcf/mujoco.yaml",
+      "type": "simulation_config",
+      "format": "yaml",
+      "size_bytes": 797,
+      "sha256": "5778739b70c5a2588a13b07c7951e1a80f6a50b3c8693862178fa4d25291740d",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/mjcf/scene.xml",
+      "type": "mjcf",
+      "format": "xml",
+      "size_bytes": 868,
+      "sha256": "8db87c3f0595bd2052952bc6213eb829136aa32d1881779e43bbdf3693e7e5bd",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/mjcf/talon.xml",
+      "type": "mjcf",
+      "format": "xml",
+      "size_bytes": 5537,
+      "sha256": "df14db2186ccfc96e8f5522e6e741f94b887ba9f2db1a0630c42b1a33df7cdbb",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/robot.urdf",
+      "type": "urdf",
+      "format": "urdf",
+      "size_bytes": 9274,
+      "sha256": "e20cf10bd4a5c6a5e4df475bbbaac85da7a29b6f48b321462ef1dd51c5845217",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/talon/robot.yaml",
+      "type": "robot_config",
+      "format": "yaml",
+      "size_bytes": 193,
+      "sha256": "a2a72123876341490a940c1db98938cca7d53f2ccb00c582b392941ff0636b47",
+      "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/scripts/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 888,
+      "sha256": "022ff508d4982648d507e1ee72a75f61cbc5c46e4eed0b1ef3c28cf02ee9c3f6",
+      "resource": "config/scripts"
+    },
+    {
+      "path": "config/tools/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 782,
+      "sha256": "b074744caf4d7cbf255db57c65307c39d129a7028b137a022944cbba31856e61",
+      "resource": null
+    },
+    {
+      "path": "config/tools/demo_gripper/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 735,
+      "sha256": "352b20974bc0337fcd3d9a148150ac1744a9be70636d5cc45a3f9624771ec448",
+      "resource": "config/tools/demo_gripper"
+    },
+    {
+      "path": "config/tools/demo_gripper/gripper.urdf",
+      "type": "urdf",
+      "format": "urdf",
+      "size_bytes": 688,
+      "sha256": "05b7b247fb1ca55df36b29e3cd583348714a3fc3ac7941680c7d882628c38020",
+      "resource": "config/tools/demo_gripper"
+    },
+    {
+      "path": "config/tools/demo_gripper/meshes/finger.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 1517,
+      "sha256": "a925a478079403dcfe4ecf940760e5e7e0d9e82c0dbf2eeaa39449b26413fb78",
+      "resource": "config/tools/demo_gripper"
+    },
+    {
+      "path": "config/tools/demo_gripper/tool.yaml",
+      "type": "tool_config",
+      "format": "yaml",
+      "size_bytes": 165,
+      "sha256": "c3db2f5b63c3ad72565e90683e82bc94f30cfa3ec32d643ff22d264571339578",
+      "resource": "config/tools/demo_gripper"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/LICENSE",
+      "type": "license",
+      "format": "text",
+      "size_bytes": 1524,
+      "sha256": "a47544ef0ad645c587e46348dc10e68b89c3e74732bd124c005cfcd8ede3b3b8",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/README.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 919,
+      "sha256": "24b814f5354763d2654433289184ed3086361e663b830af0f5ed1134c35d3705",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/SOURCE.md",
+      "type": "source_notice",
+      "format": "md",
+      "size_bytes": 1748,
+      "sha256": "60b486d6d8b1093eb3c44deeff70e04a790a50f39ee6d9a96d5c15f77c8da76b",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/gripper.urdf",
+      "type": "urdf",
+      "format": "urdf",
+      "size_bytes": 9828,
+      "sha256": "df0d3617abd73beb100c514aaccff2bebf7a6ee0205f8db45643c25b3da7e156",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/left_finger.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 19684,
+      "sha256": "f39a50be121122fc1c53c588a762ad1da8a0f64d39bc6f299cbe9b0597e7257b",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/left_finger_tip.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 11284,
+      "sha256": "9d90031cd99106a8be63609f8ff78580638d91cc4167bf66c09198329f2e65cf",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/left_inner_knuckle.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 17984,
+      "sha256": "f250a3fea49be4d1bb2383d9980172c59fc44031193ef2293ca540f756f6c1e6",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/left_knuckle.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 4384,
+      "sha256": "b7ec787f57a7db5b2b14e64ffbedaac28739e38f14aac8afa8b575bac941feb7",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/right_finger.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 19684,
+      "sha256": "1d018fa2f0b50aca5941778d78810b211b1abfc8637c7953451d76d4833ba6f8",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/right_finger_tip.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 11284,
+      "sha256": "126f1559f2f7dca62449a6ca926c609fbdaa93ca66df805ff7c069bb206e3d10",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/right_inner_knuckle.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 17784,
+      "sha256": "c936d951ede875b91c180bd41d45b22ae23f8a39d9c3e09e29066453a8e863ef",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/right_knuckle.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 4384,
+      "sha256": "d151fb38f59748f1e6e627312e2ede96f2c98ba267bf722091665b20c78e7a8d",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/meshes/robotiq_base.stl",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 20084,
+      "sha256": "ede5cd7d7846c051b88645f33d6bbb5ed9b36bbef404a19a46557639bfab7060",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/tools/robotiq_2f85/tool.yaml",
+      "type": "tool_config",
+      "format": "yaml",
+      "size_bytes": 353,
+      "sha256": "a7ae545142d244e6c89a2faacb39dd284007b68b6f653c755e8ebde8d77e85f2",
+      "resource": "config/tools/robotiq_2f85"
+    },
+    {
+      "path": "config/user.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 131,
+      "sha256": "198a361bab807bf180b86e1ce650b701903788ddd42d9cc97d49d10ab7756c41",
+      "resource": "config/user.yaml"
+    },
+    {
+      "path": "docs/manifest.md",
+      "type": "documentation",
+      "format": "md",
+      "size_bytes": 4187,
+      "sha256": "a0326e91d6b06b1cdb97aae2300ad6254df01457ec2a7d48bfac0e95e4a8a4bd",
+      "resource": null
+    },
+    {
+      "path": "docs/机器人模型及数据统一管理方案.pdf",
+      "type": "documentation",
+      "format": "pdf",
+      "size_bytes": 375001,
+      "sha256": "6af446f57b15f63711d15c2abfe446b6dfa3b2cbee55d2846bf07255a8789a95",
+      "resource": null
+    }
+  ]
+}

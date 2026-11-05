@@ -1,0 +1,10 @@
+# 独立 rocos-igh ENI 入口模板；由 rocos-cfg 按实际工程更新。
+# ENI 路径相对本文件，此处选择已有 Talon ENI 作为模板示例。
+eni: robots/talon/eni7.xml
+id: 0
+cycle: 1000
+cpuidx: null
+dc: 'on'
+preop_timeout_ms: 10000
+op_timeout_ms: 60000
+pdo_config_attempts: 5

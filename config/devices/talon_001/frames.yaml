@@ -1,0 +1,56 @@
+active_tool: demo_gripper
+active_object: ""
+robot_id: talon_001
+tools:
+  {}
+objects:
+  {}
+package_tools:
+  demo_gripper:
+    digest: b971d8f47c327a24c2292f0742fc5e5312de2a2ef791a3e14ae6ff932fbad3f9
+    package_version: 1.0.0
+    mount:
+      position:
+        - 0
+        - 0
+        - 0
+      orientation:
+        - 0
+        - 0
+        - 0
+        - 1
+    tcp:
+      position:
+        - 0
+        - 0
+        - 0.14000000000000001
+      orientation:
+        - 0
+        - 0
+        - 0
+        - 1
+    revision: 2
+  robotiq_2f85:
+    digest: 6fe84b9314704030a3803570da88a0d5429bf79258e7f20433e4b04093552c2f
+    package_version: 1.0.0
+    mount:
+      position:
+        - 0
+        - 0
+        - 0
+      orientation:
+        - 0
+        - 0
+        - 0
+        - 1
+    tcp:
+      position:
+        - 0
+        - 0
+        - 0
+      orientation:
+        - 0
+        - 0
+        - 0
+        - 1
+    revision: 1

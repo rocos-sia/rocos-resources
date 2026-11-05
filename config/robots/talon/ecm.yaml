@@ -1,0 +1,21 @@
+# 主站参数；相对路径以本文件所在目录为基准。
+master:
+  eni: eni7.xml
+  id: 0
+  duration: 0
+  cycle: 1000
+  command_timeout_ms: 1000  # v2 非实时邮箱命令截止时间上限 [1, 60000] ms
+  verbose: diagnostic
+  cpuidx: 0
+  perf: timing
+  sp: 6000
+  log: ''
+  dcmmode: bus_shift
+  ctloff: false
+  link: IntelGbeRec
+  instance: 2
+  mode: polling
+  state: op
+  license: ''  # 实际授权通过现场工程配置填写
+  maxbusslaves: 256
+  mbxsrv: null
