@@ -2,32 +2,32 @@
   "schema_version": 1,
   "specification": "https://rocos-sia.feishu.cn/wiki/Wj2IwOm8BiYslfkxImicRpArn6g",
   "summary": {
-    "resource_count": 11,
-    "file_count": 79,
-    "total_size_bytes": 21941055,
+    "resource_count": 13,
+    "file_count": 93,
+    "total_size_bytes": 24050444,
     "resource_types": {
-      "config_template": 4,
+      "config_template": 5,
       "device": 2,
-      "robot": 2,
+      "robot": 3,
       "script_collection": 1,
       "tool": 2
     },
     "file_types": {
-      "configuration": 4,
+      "configuration": 6,
       "device_config": 2,
       "documentation": 21,
-      "ethercat_eni": 1,
+      "ethercat_eni": 2,
       "frame_records": 1,
-      "hardware_config": 2,
+      "hardware_config": 3,
       "license": 1,
-      "master_config": 3,
-      "mesh": 27,
+      "master_config": 4,
+      "mesh": 34,
       "mjcf": 5,
-      "robot_config": 2,
+      "robot_config": 3,
       "simulation_config": 2,
       "source_notice": 2,
       "tool_config": 2,
-      "urdf": 4
+      "urdf": 5
     }
   },
   "resources": [
@@ -46,6 +46,15 @@
       "name": "app_rcm",
       "path": "config/app_rcm.yaml",
       "entrypoint": "config/app_rcm.yaml",
+      "readme": null,
+      "file_count": 1
+    },
+    {
+      "id": "config/app_tech6.yaml",
+      "type": "config_template",
+      "name": "app_tech6",
+      "path": "config/app_tech6.yaml",
+      "entrypoint": "config/app_tech6.yaml",
       "readme": null,
       "file_count": 1
     },
@@ -93,6 +102,15 @@
       "entrypoint": "config/robots/talon/robot.yaml",
       "readme": "config/robots/talon/README.md",
       "file_count": 19
+    },
+    {
+      "id": "config/robots/techsoft_tb6_r3",
+      "type": "robot",
+      "name": "techsoft_tb6_r3",
+      "path": "config/robots/techsoft_tb6_r3",
+      "entrypoint": "config/robots/techsoft_tb6_r3/robot.yaml",
+      "readme": null,
+      "file_count": 13
     },
     {
       "id": "config/scripts",
@@ -179,6 +197,14 @@
       "size_bytes": 652,
       "sha256": "67297e27c13b208ebd8e13e79bfdb4453b6626865c738a93598cf37430133b26",
       "resource": "config/app_rcm.yaml"
+    },
+    {
+      "path": "config/app_tech6.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 585,
+      "sha256": "7f49205a6b9ec5f44eda790b972783022865cdf522a27c3e16fcb271df389105",
+      "resource": "config/app_tech6.yaml"
     },
     {
       "path": "config/devices/README.md",
@@ -579,6 +605,110 @@
       "size_bytes": 193,
       "sha256": "a2a72123876341490a940c1db98938cca7d53f2ccb00c582b392941ff0636b47",
       "resource": "config/robots/talon"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/config.yaml",
+      "type": "configuration",
+      "format": "yaml",
+      "size_bytes": 1321,
+      "sha256": "b6e864391cf918f89d79cb153e8df244dcde579182ba38b932216fbbd3cba723",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/ecm.yaml",
+      "type": "master_config",
+      "format": "yaml",
+      "size_bytes": 613,
+      "sha256": "c3f831a2b797b1a8dd5d970c22f332598a5650f14d973e84f7c0a7517c5d9fe5",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/eni6.xml",
+      "type": "ethercat_eni",
+      "format": "xml",
+      "size_bytes": 219739,
+      "sha256": "ed96789babd212536537b4ab0a5943ace273ac75b7558cd7e7427a1fb13c4414",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/hardware.yaml",
+      "type": "hardware_config",
+      "format": "yaml",
+      "size_bytes": 6040,
+      "sha256": "2a22f1b948711e5b697ddab5dfa4944cc72fccee58226c10a5ae3f7b23c4706a",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/base_link.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 257184,
+      "sha256": "89f9e3f37aecbf0617fdc292a9642cc0a47baffc387a7f93470c1c28eb8c2102",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_1.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 203484,
+      "sha256": "6f996fb5f525f6bdaa10c66d2d3cc7fe739cf7064f64d48a243209d6129f190f",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_2.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 311484,
+      "sha256": "6e2de23334c495fcfc54ccb422b60e5b4f898b377e66adb1192b3d4b6233e811",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_3.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 307384,
+      "sha256": "4025e7049b6c99a5b32994d637c518944594ef0ff8e204adfb20b4762ec37768",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_4.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 244584,
+      "sha256": "a2232406c0d0fb144328b6d951ce5a512661ec667586038f369f7cd78b22ce9c",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_5.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 217884,
+      "sha256": "4a654f05c01b8ef10c75f9c85282713b1b1e505f7d8f94193c4b104d59ec24be",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/meshes/link_6.STL",
+      "type": "mesh",
+      "format": "stl",
+      "size_bytes": 331184,
+      "sha256": "e91364ba64052fe1f752f53d0943e3edc0446955f103926cff285dd793493ff1",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/robot.urdf",
+      "type": "urdf",
+      "format": "urdf",
+      "size_bytes": 7700,
+      "sha256": "fcb84cb77eeeb50d2208c3e4d7310ce95bc05e1dead8564c05606ba6da815be2",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
+      "path": "config/robots/techsoft_tb6_r3/robot.yaml",
+      "type": "robot_config",
+      "format": "yaml",
+      "size_bytes": 203,
+      "sha256": "7071495832951a7f3d747bf2d6383d926c1a2f7fb3e5ccab440041136b04b249",
+      "resource": "config/robots/techsoft_tb6_r3"
     },
     {
       "path": "config/scripts/README.md",
