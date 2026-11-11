@@ -1,8 +1,13 @@
 # Techsoft TB6 R3 六轴硬件配置；id 为 ENI 从站的零基拓扑序号（物理地址 1001–1006）。
-# 第三轴位置限位经现场确认为 ±150°；六轴速度限位临时测试设为 100.0 rad/s。
-# 临时测试：六轴 acc=1000.0 rad/s²、jerk=1000.0 rad/s³。
-# 其余限位与换算保留原 robot.urdf 的名义值。
+# 第三轴位置限位经现场确认为 ±150°。
+# 六轴运动限位：vel=1.0 rad/s、acc=10.0 rad/s²、jerk=100.0 rad/s³。
+# 其余限位保留原 robot.urdf 的名义值。
 # ENI 不提供减速比、编码器零点和力矩标定。
+# 换算依据：docs/TB6-R3六轴关节参数与码值换算.xlsx；J1–J3 n=101，J4–J6 n=100。
+# pos_per_unit = 2^17/(2π)，低速端位置不再乘减速比。
+# vel_per_unit = (20000×4)×n/(0.1×2π)，高速端速度每码为 0.1 count/s。
+# torque_per_unit = 1000/(额定电流×力矩常数×n)，按用户确认的额定力矩千分比折算低速端，不计效率。
+# 下列速度、力矩系数已包含减速比，ratio 保持 1.0。
 # eni6.xml 通过 SDO 0x6060=8 初始化 CSP，启用 RxPDO 0x1600 / TxPDO 0x1a00。
 # 模式、目标位置/速度/力矩均映射；PDO 名称取 ProcessImage 最后一段，保留 [序号] 后缀。
 # 未提供独立负载力矩/副编码器；对应输入留空，GetJointLoadTorque 返回 0。
@@ -15,16 +20,16 @@ hardware:
     limit:
       lower: -2.0
       upper: 2.0
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12859719.401825  # 高速端速度码/(rad/s)，n=101
+      torque_per_unit: 11.001100110011  # 低速端力矩码/(N·m)，1000/(6×0.15×101)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
@@ -49,16 +54,16 @@ hardware:
     limit:
       lower: -2.0
       upper: 2.0
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12859719.401825  # 高速端速度码/(rad/s)，n=101
+      torque_per_unit: 11.001100110011  # 低速端力矩码/(N·m)，1000/(6×0.15×101)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
@@ -83,16 +88,16 @@ hardware:
     limit:
       lower: -2.6179938779914944
       upper: 2.6179938779914944
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12859719.401825  # 高速端速度码/(rad/s)，n=101
+      torque_per_unit: 21.943683730075  # 低速端力矩码/(N·m)，1000/(4.7×0.096×101)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
@@ -117,16 +122,16 @@ hardware:
     limit:
       lower: -2.0
       upper: 2.0
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12732395.447352  # 高速端速度码/(rad/s)，n=100
+      torque_per_unit: 46.296296296296  # 低速端力矩码/(N·m)，1000/(2.7×0.08×100)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
@@ -151,16 +156,16 @@ hardware:
     limit:
       lower: -2.0
       upper: 2.0
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12732395.447352  # 高速端速度码/(rad/s)，n=100
+      torque_per_unit: 46.296296296296  # 低速端力矩码/(N·m)，1000/(2.7×0.08×100)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
@@ -185,16 +190,16 @@ hardware:
     limit:
       lower: -2.0
       upper: 2.0
-      vel: 100.0
-      acc: 1000.0
-      jerk: 1000.0
+      vel: 1.0
+      acc: 10.0
+      jerk: 100.0
       effort: 30.0
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
-      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
-      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      pos_per_unit: 20860.756700940907  # 低速端位置 count/rad
+      vel_per_unit: 12732395.447352  # 高速端速度码/(rad/s)，n=100
+      torque_per_unit: 46.296296296296  # 低速端力矩码/(N·m)，1000/(2.7×0.08×100)
       load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
