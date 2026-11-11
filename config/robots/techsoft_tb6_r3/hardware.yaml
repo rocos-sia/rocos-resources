@@ -1,0 +1,200 @@
+# Techsoft TB6 R3 六轴硬件配置；id 为 ENI 从站的零基拓扑序号（物理地址 1001–1006）。
+# 第三轴位置限位经现场确认为 ±150°；六轴速度限位临时测试设为 100.0 rad/s。
+# 临时测试：六轴 acc=1000.0 rad/s²、jerk=1000.0 rad/s³。
+# 其余限位与换算保留原 robot.urdf 的名义值。
+# ENI 不提供减速比、编码器零点和力矩标定。
+# eni6.xml 通过 SDO 0x6060=8 初始化 CSP，启用 RxPDO 0x1600 / TxPDO 0x1a00。
+# 模式、目标位置/速度/力矩均映射；PDO 名称取 ProcessImage 最后一段，保留 [序号] 后缀。
+# 未提供独立负载力矩/副编码器；对应输入留空，GetJointLoadTorque 返回 0。
+hardware:
+  # joint_1 — ENI Slave_1001
+  - id: 0
+    type: driver
+    joint_name: joint_1
+    torque_source: load_torque
+    limit:
+      lower: -2.0
+      upper: 2.0
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"
+
+  # joint_2 — ENI Slave_1002
+  - id: 1
+    type: driver
+    joint_name: joint_2
+    torque_source: load_torque
+    limit:
+      lower: -2.0
+      upper: 2.0
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"
+
+  # joint_3 — ENI Slave_1003
+  - id: 2
+    type: driver
+    joint_name: joint_3
+    torque_source: load_torque
+    limit:
+      lower: -2.6179938779914944
+      upper: 2.6179938779914944
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"
+
+  # joint_4 — ENI Slave_1004
+  - id: 3
+    type: driver
+    joint_name: joint_4
+    torque_source: load_torque
+    limit:
+      lower: -2.0
+      upper: 2.0
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"
+
+  # joint_5 — ENI Slave_1005
+  - id: 4
+    type: driver
+    joint_name: joint_5
+    torque_source: load_torque
+    limit:
+      lower: -2.0
+      upper: 2.0
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"
+
+  # joint_6 — ENI Slave_1006
+  - id: 5
+    type: driver
+    joint_name: joint_6
+    torque_source: load_torque
+    limit:
+      lower: -2.0
+      upper: 2.0
+      vel: 100.0
+      acc: 1000.0
+      jerk: 1000.0
+      effort: 30.0
+    transform:
+      ratio: 1.0
+      offset_pos_cnt: 0
+      cnt_per_unit: 20860.757
+      torque_per_unit: 1.0
+      user_unit_name: rad
+    inputs:
+      status_word: "Status word[0]"
+      position_actual_value: "Actual motor position[1]"
+      velocity_actual_value: "Actual motor velocity[2]"
+      torque_actual_value: "Torque actual value[3]"
+      load_torque_value: ''
+      secondary_position_value: ''
+    outputs:
+      control_word: "Control word[2]"
+      mode_of_operation: "Modes of operation[0]"
+      target_position: "Profile target position[3]"
+      target_velocity: "Target velocity[4]"
+      target_torque: "Target Torque[1]"

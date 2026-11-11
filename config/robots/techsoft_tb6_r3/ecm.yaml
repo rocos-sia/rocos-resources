@@ -1,0 +1,23 @@
+# TB6 R3 主站参数；相对路径以本文件所在目录为基准。
+# ENI: 6 个从站，Cyclic/CycleTime=1000 us，DC CycleTime0=1000000 ns。
+# 网卡、CPU、授权等为现场参数，部署时按实际主站核定。
+master:
+  eni: eni6.xml
+  id: 0
+  duration: 0
+  cycle: 1000
+  command_timeout_ms: 1000  # v2 非实时邮箱命令截止时间上限 [1, 60000] ms
+  verbose: diagnostic
+  cpuidx: 0
+  perf: timing
+  sp: 6000
+  log: ''
+  dcmmode: bus_shift
+  ctloff: false
+  link: IntelGbe
+  instance: 1
+  mode: polling
+  state: op
+  license: A0204F1E-F561C3EB-34FC7050
+  maxbusslaves: 256
+  mbxsrv: null
