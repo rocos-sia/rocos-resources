@@ -4,7 +4,7 @@
   "summary": {
     "resource_count": 13,
     "file_count": 93,
-    "total_size_bytes": 24050444,
+    "total_size_bytes": 24056791,
     "resource_types": {
       "config_template": 5,
       "device": 2,
@@ -322,8 +322,8 @@
       "path": "config/robots/rcm/hardware.yaml",
       "type": "hardware_config",
       "format": "yaml",
-      "size_bytes": 6453,
-      "sha256": "0df60b90022c7fcd8a993bfcfa576307b0468db1648fcc91c0645cea9f5b72bb",
+      "size_bytes": 8895,
+      "sha256": "05a8ec47633cd01aff7898fef61d9a078ee21195f598d76ae5ffcea766132501",
       "resource": "config/robots/rcm"
     },
     {
@@ -482,8 +482,8 @@
       "path": "config/robots/talon/hardware.yaml",
       "type": "hardware_config",
       "format": "yaml",
-      "size_bytes": 7693,
-      "sha256": "575e02fe74e160a37447c93d8384327f8110ff1dc56447db6cad5d485a215f0d",
+      "size_bytes": 9798,
+      "sha256": "edbeb7da1c56dfe91cb934fdc33e5b83297dbb901647ff7b6ab69dde645b3348",
       "resource": "config/robots/talon"
     },
     {
@@ -634,8 +634,8 @@
       "path": "config/robots/techsoft_tb6_r3/hardware.yaml",
       "type": "hardware_config",
       "format": "yaml",
-      "size_bytes": 6040,
-      "sha256": "2a22f1b948711e5b697ddab5dfa4944cc72fccee58226c10a5ae3f7b23c4706a",
+      "size_bytes": 7840,
+      "sha256": "8ca3cf5faaf9f1acbca6916eade097bbfafedf5c40ca0e5c4df55ed4d6640b71",
       "resource": "config/robots/techsoft_tb6_r3"
     },
     {

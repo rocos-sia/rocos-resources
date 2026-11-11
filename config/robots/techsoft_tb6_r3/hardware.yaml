@@ -22,8 +22,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
@@ -54,8 +56,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
@@ -86,8 +90,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
@@ -118,8 +124,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
@@ -150,8 +158,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
@@ -182,8 +192,10 @@ hardware:
     transform:
       ratio: 1.0
       offset_pos_cnt: 0
-      cnt_per_unit: 20860.757
-      torque_per_unit: 1.0
+      pos_per_unit: 20860.757  # 位置码值/单位（rad 或 m），默认 1.0
+      vel_per_unit: 20860.757  # 速度码值/(单位/s)，省略时等于 pos_per_unit
+      torque_per_unit: 1.0  # 驱动器力矩码值/单位力矩，默认 1.0
+      load_torque_per_unit: 1.0  # 负载力矩码值/单位力矩，两种 torque_source 共用，默认 1.0
       user_unit_name: rad
     inputs:
       status_word: "Status word[0]"
