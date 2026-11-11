@@ -4,7 +4,7 @@
   "summary": {
     "resource_count": 13,
     "file_count": 94,
-    "total_size_bytes": 24090205,
+    "total_size_bytes": 24090201,
     "resource_types": {
       "config_template": 5,
       "device": 2,
@@ -707,8 +707,8 @@
       "path": "config/robots/techsoft_tb6_r3/robot.urdf",
       "type": "urdf",
       "format": "urdf",
-      "size_bytes": 7700,
-      "sha256": "fcb84cb77eeeb50d2208c3e4d7310ce95bc05e1dead8564c05606ba6da815be2",
+      "size_bytes": 7696,
+      "sha256": "0ab7e31f95cdaa3a40ab7f7a13987ca744b27f7e8ed85850175cd6b1653a3051",
       "resource": "config/robots/techsoft_tb6_r3"
     },
     {
