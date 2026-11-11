@@ -3,8 +3,8 @@
   "specification": "https://rocos-sia.feishu.cn/wiki/Wj2IwOm8BiYslfkxImicRpArn6g",
   "summary": {
     "resource_count": 13,
-    "file_count": 93,
-    "total_size_bytes": 24056791,
+    "file_count": 94,
+    "total_size_bytes": 24090205,
     "resource_types": {
       "config_template": 5,
       "device": 2,
@@ -14,6 +14,7 @@
     },
     "file_types": {
       "configuration": 6,
+      "data": 1,
       "device_config": 2,
       "documentation": 21,
       "ethercat_eni": 2,
@@ -110,7 +111,7 @@
       "path": "config/robots/techsoft_tb6_r3",
       "entrypoint": "config/robots/techsoft_tb6_r3/robot.yaml",
       "readme": null,
-      "file_count": 13
+      "file_count": 14
     },
     {
       "id": "config/scripts",
@@ -615,6 +616,14 @@
       "resource": "config/robots/techsoft_tb6_r3"
     },
     {
+      "path": "config/robots/techsoft_tb6_r3/docs/TB6-R3六轴关节参数与码值换算.xlsx",
+      "type": "data",
+      "format": "xlsx",
+      "size_bytes": 33118,
+      "sha256": "f6834c9fa7f0ae694751e629e280470085f391bf572365e494f435004df4f8cc",
+      "resource": "config/robots/techsoft_tb6_r3"
+    },
+    {
       "path": "config/robots/techsoft_tb6_r3/ecm.yaml",
       "type": "master_config",
       "format": "yaml",
@@ -634,8 +643,8 @@
       "path": "config/robots/techsoft_tb6_r3/hardware.yaml",
       "type": "hardware_config",
       "format": "yaml",
-      "size_bytes": 7840,
-      "sha256": "8ca3cf5faaf9f1acbca6916eade097bbfafedf5c40ca0e5c4df55ed4d6640b71",
+      "size_bytes": 8136,
+      "sha256": "af1251ea0aab4c6d1bc1e9317705f1d626f8a5d51887c01b3454716f4be8e139",
       "resource": "config/robots/techsoft_tb6_r3"
     },
     {
