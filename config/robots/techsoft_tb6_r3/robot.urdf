@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="techsoft_tb6_r3">
-    <!-- 临时测试：六轴速度限位统一设为 100.0 rad/s；acc/jerk 见 hardware.yaml。 -->
+    <!-- 六轴限位与 hardware.yaml 同步，速度限位为 1.0 rad/s；acc/jerk 见 hardware.yaml。 -->
     <link name="base_link">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -43,7 +43,7 @@
         <parent link="base_link"/>
         <child link="link_1"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.0" upper="2.0" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.0" upper="2.0" velocity="1.0" effort="30.0"/>
     </joint>
     <link name="link_2">
         <inertial>
@@ -74,7 +74,7 @@
         <parent link="link_1"/>
         <child link="link_2"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.0" upper="2.0" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.0" upper="2.0" velocity="1.0" effort="30.0"/>
     </joint>
     <link name="link_3">
         <inertial>
@@ -105,7 +105,7 @@
         <parent link="link_2"/>
         <child link="link_3"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.6179938779914944" upper="2.6179938779914944" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.6179938779914944" upper="2.6179938779914944" velocity="1.0" effort="30.0"/>
     </joint>
     <link name="link_4">
         <inertial>
@@ -137,7 +137,7 @@
         <parent link="link_3"/>
         <child link="link_4"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.0" upper="2.0" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.0" upper="2.0" velocity="1.0" effort="30.0"/>
     </joint>
     <link name="link_5">
         <inertial>
@@ -168,7 +168,7 @@
         <parent link="link_4"/>
         <child link="link_5"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.0" upper="2.0" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.0" upper="2.0" velocity="1.0" effort="30.0"/>
     </joint>
     <link name="link_6">
         <inertial>
@@ -199,6 +199,6 @@
         <parent link="link_5"/>
         <child link="link_6"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-2.0" upper="2.0" velocity="100.0" effort="30.0"/>
+        <limit lower="-2.0" upper="2.0" velocity="1.0" effort="30.0"/>
     </joint>
 </robot>
